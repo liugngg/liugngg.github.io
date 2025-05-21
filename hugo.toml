@@ -1,0 +1,4 @@
+baseURL = 'https://liugngg.github.io/'
+languageCode = 'zh-cn'
+title = 'Liugngg blog'
+theme = 'clarity'

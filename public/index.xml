@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Liugngg blog</title>
+    <link>https://liugngg.github.io/</link>
+    <description>Recent content on Liugngg blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 15 May 2025 14:27:10 +0800</lastBuildDate><atom:link href="https://liugngg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>超详细Nginx简易教程，一学就会！</title>
+      <link>https://liugngg.github.io/posts/%E8%B6%85%E8%AF%A6%E7%BB%86nginx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B%E4%B8%80%E5%AD%A6%E5%B0%B1%E4%BC%9A/</link>
+      <pubDate>Thu, 15 May 2025 14:27:10 +0800</pubDate>
+      
+      <guid>https://liugngg.github.io/posts/%E8%B6%85%E8%AF%A6%E7%BB%86nginx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B%E4%B8%80%E5%AD%A6%E5%B0%B1%E4%BC%9A/</guid>
+      <description>
+        
+          
+            &lt;hr&gt;
+&lt;p&gt;title: &amp;ldquo;超详细Nginx简易教程，一学就会！&amp;rdquo;
+source: &amp;ldquo;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/39953552%22&#34;&gt;https://zhuanlan.zhihu.com/p/39953552&amp;quot;&lt;/a&gt;
+author:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;[[知乎专栏]]&amp;rdquo;
+published:
+created: 2025-05-15
+description: &amp;ldquo;Nginx (engine x) 是一款轻量级的Web 服务器 、反向代理服务器及电子邮件（IMAP/POP3）代理服务器…&amp;rdquo;
+tags:&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;clippings&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;![[attachments/7bcf231faef25274f596f290fdeb6d7e_MD5.avif]]&lt;/p&gt;
+&lt;p&gt;超详细Nginx简易教程，一学就会！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作者：静默虚空&lt;br&gt;
+链接： &lt;a href=&#34;https://link.zhihu.com/?target=https%3A//www.cnblogs.com/jingmoxukong/p/5945200.html&#34;&gt;cnblogs.com/jingmoxukon&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;概述&#34;&gt;&lt;strong&gt;概述&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;什么是nginx&#34;&gt;&lt;strong&gt;什么是nginx?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Nginx (engine x) 是一款轻量级的Web 服务器 、反向代理服务器及电子邮件（IMAP/POP3）代理服务器。&lt;/p&gt;
+&lt;h3 id=&#34;什么是反向代理&#34;&gt;&lt;strong&gt;什么是反向代理？&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个 &lt;a href=&#34;https://zhida.zhihu.com/search?content_id=7940355&amp;amp;content_type=Article&amp;amp;match_order=2&amp;amp;q=%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8&amp;amp;zhida_source=entity&#34;&gt;反向代理服务器&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;![[attachments/bfeb9e562e69d3b9e435b4df0341e1d2_MD5.jpg]]&lt;/p&gt;
+&lt;h2 id=&#34;安装与使用&#34;&gt;&lt;strong&gt;安装与使用&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;安装&#34;&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;nginx官网下载地址： &lt;a href=&#34;https://link.zhihu.com/?target=http%3A//nginx.org&#34;&gt;nginx.org&lt;/a&gt; ，发布版本分为 Linux 和 windows 版本。&lt;/p&gt;
+&lt;p&gt;也可以下载源码，编译后运行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;从 &lt;a href=&#34;https://zhida.zhihu.com/search?content_id=7940355&amp;amp;content_type=Article&amp;amp;match_order=1&amp;amp;q=%E6%BA%90%E4%BB%A3%E7%A0%81&amp;amp;zhida_source=entity&#34;&gt;源代码&lt;/a&gt; 编译 Nginx&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;把源码解压缩之后，在终端里运行如下命令：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ./configure
+$ make
+$ sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;默认情况下，Nginx 会被安装在 /usr/local/nginx。通过设定编译选项，你可以改变这个设定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Windows 安装&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为了安装 Nginx / Win32，需先下载它。然后解压之，然后运行即可。下面以 C 盘根目录为例说明下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd C:
+cd C: ginx-0.8.54   start nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nginx / Win32 是运行在一个控制台程序，而非 windows 服务方式的。服务器方式目前还是开发尝试中。&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>搜集整理的网盘搜索资源</title>
+      <link>https://liugngg.github.io/posts/%E6%90%9C%E9%9B%86%E6%95%B4%E7%90%86%E7%9A%84%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Wed, 14 May 2025 14:21:10 +0800</pubDate>
+      
+      <guid>https://liugngg.github.io/posts/%E6%90%9C%E9%9B%86%E6%95%B4%E7%90%86%E7%9A%84%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90/</guid>
+      <description>
+        
+          
+            &lt;h2 id=&#34;搜集整理的网盘搜索资源&#34;&gt;搜集整理的网盘搜索资源&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.upyunso.com/&#34;&gt;阿里盘搜&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.niceso.fun&#34;&gt;阿奈斯搜索&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pan666.cn&#34;&gt;阿里小站&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://ujuso.com/&#34;&gt;优聚搜阿里蓝奏百度&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://alipan.vip/&#34;&gt;阿里盘盘&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.chaonengso.com/m&#34;&gt;百度超能搜索&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://newxiaozhan.com/&#34;&gt;我不是盘神&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.nmme.cc/&#34;&gt;百度阿里迅雷橘子搜索&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://alipaper.gitcafe.ink/&#34;&gt;阿里小纸条&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.alipansou.com/&#34;&gt;阿里盘搜&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://wpxz.org/&#34;&gt;网盘小站&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://wanrenmi8.com/indexs.html&#34;&gt;万人迷吧网盘搜索&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://zscc.ysepan.com/&#34;&gt;600T的阿里云盘小站&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
