@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Liugngg blog</title>
-    <link>https://liugngg.github.io/</link>
+    <link>https://blog.liugngg.top/</link>
     <description>Recent content on Liugngg blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 15 May 2025 14:27:10 +0800</lastBuildDate><atom:link href="https://liugngg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 May 2025 14:27:10 +0800</lastBuildDate><atom:link href="https://blog.liugngg.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>超详细Nginx简易教程，一学就会！</title>
-      <link>https://liugngg.github.io/posts/%E8%B6%85%E8%AF%A6%E7%BB%86nginx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B%E4%B8%80%E5%AD%A6%E5%B0%B1%E4%BC%9A/</link>
+      <link>https://blog.liugngg.top/posts/%E8%B6%85%E8%AF%A6%E7%BB%86nginx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B%E4%B8%80%E5%AD%A6%E5%B0%B1%E4%BC%9A/</link>
       <pubDate>Thu, 15 May 2025 14:27:10 +0800</pubDate>
       
-      <guid>https://liugngg.github.io/posts/%E8%B6%85%E8%AF%A6%E7%BB%86nginx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B%E4%B8%80%E5%AD%A6%E5%B0%B1%E4%BC%9A/</guid>
+      <guid>https://blog.liugngg.top/posts/%E8%B6%85%E8%AF%A6%E7%BB%86nginx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B%E4%B8%80%E5%AD%A6%E5%B0%B1%E4%BC%9A/</guid>
       <description>
         
           
@@ -63,10 +63,10 @@ cd C: ginx-0.8.54   start nginx
     
     <item>
       <title>搜集整理的网盘搜索资源</title>
-      <link>https://liugngg.github.io/posts/%E6%90%9C%E9%9B%86%E6%95%B4%E7%90%86%E7%9A%84%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90/</link>
+      <link>https://blog.liugngg.top/posts/%E6%90%9C%E9%9B%86%E6%95%B4%E7%90%86%E7%9A%84%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90/</link>
       <pubDate>Wed, 14 May 2025 14:21:10 +0800</pubDate>
       
-      <guid>https://liugngg.github.io/posts/%E6%90%9C%E9%9B%86%E6%95%B4%E7%90%86%E7%9A%84%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90/</guid>
+      <guid>https://blog.liugngg.top/posts/%E6%90%9C%E9%9B%86%E6%95%B4%E7%90%86%E7%9A%84%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90/</guid>
       <description>
         
           
