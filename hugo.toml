@@ -1,4 +1,4 @@
 baseURL = 'https://blog.liugngg.top/'
 languageCode = 'zh-cn'
 title = 'Liugngg blog'
-theme = 'clarity'
+theme = 'papermod'
