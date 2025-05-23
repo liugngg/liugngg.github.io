@@ -1,16 +1,26 @@
 ---
-title: Enveloppe 插件适配 Hugo 的配置
-source: https://www.printlove.cn/github-publisher-hugo/
-author:
-  - "[Evan Miao]({{< relref "Evan%20Miao.md" >}})"
-published: 2024-01-14
-created: 2025-05-23
-description: 2025-04-02 更新了 Text Replacer 配置中箭头上下的含义先写了 使用 Obsidian 免费建个人博客 这篇文章，但是发现枯燥的讲解这个插件的配置不适合初学者，所以索性在这篇文章中统一整理下，对于想更深入了解的人可以选择性看看这篇。本文基于 Obsidian 的 Enveloppe 插件，版本：v6.15.7，版本不同可能略有差异，如果差异影响使用了，我就会更新该篇文章，及时收到通知可以关注我的频道。下面我会对重要的配置进行讲解，如果你暂时不想看了，可以使用我提供的默认配置。File paths Property key 可以通过文章的属性设置上传的目录，例如我这配置：通过 dir 属性获取上传的目录，最终的上传路径为 Root folder / Property key，即 content/{dir} 如果 dir 属性没有设置则默认上传到 Default folder 目录下，即 content/posts Content Text replacer 每行后面都有个箭头，↓箭头表示插件应用其它配置之前替换，↑箭头表示之后替换。[Wikilinks]({{< relref "Wikilinks.md" >}}) 转 [MDlinks](links) 开启 Content -> [Wikilinks]({{< relref "Wikilinks.md" >}}) 转 [MDlinks](links) 菜单。图片 在 Obsidian 中引用本地图片链接时是不需要路径的，而在 Hugo 中一般会把图片统一放在 /static/images 目录下。因此在 Hugo 文章的引用方式路径为 /images/图片名称。我图片在本地存储的，如果你有图床那这个配置也没那么重要现在要做的就是给 Obsidian 的本地图片路径增加 /images 前缀，使用到了 Text replacer 正则。
+date: 2025-05-23
 tags:
-  - clippings
+  - markdown
+  - hugo
+  - obsidian
+title: Enveloppe 插件适配 Hugo 的配置
+slug: 14:18
 share: true
+keywords: 
+description: 
+series: 系列
+lastmod: 
+lang: cn
+cover:
+  image: 
+author:
+  - liug
+dir: posts
+source: https://www.printlove.cn/github-publisher-hugo/
 ---
-> 2025-04-02 更新了 Text Replacer 配置中箭头上下的含义
+
+> 2025-04-02 更新
 
 先写了 [使用 Obsidian 免费建个人博客](https://www.printlove.cn/obsidian-blog/) 这篇文章，但是发现枯燥的讲解这个插件的配置不适合初学者，所以索性在这篇文章中统一整理下，对于想更深入了解的人可以选择性看看这篇。
 
