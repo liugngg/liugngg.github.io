@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Markdown on Liugngg blog</title>
+    <link>http://localhost:1313/tags/markdown/</link>
+    <description>Recent content in Markdown on Liugngg blog</description>
+    <generator>Hugo -- 0.146.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typora使用教程-liug</title>
+      <link>http://localhost:1313/posts/1614/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/1614/</guid>
+      <description>Typora是一款轻便简洁的Markdown编辑器，支持即时渲染技术，这也是与其他Markdown编辑器最显著的区别。即时渲染使得你写Markdown就想是写Word文档一样流畅自如，不像其他编辑器的有编辑栏和显示栏。</description>
+    </item>
+  </channel>
+</rss>
