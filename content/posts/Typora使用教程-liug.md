@@ -37,8 +37,8 @@ Typora是一款轻便简洁的Markdown编辑器，支持即时渲染技术，这
 
 ***
 
-[Open: Pasted image 20250515111214.png](/attachments/e0c24f28a3cd4dd040a3917bcce10edc_MD5.jpeg)
-![e0c24f28a3cd4dd040a3917bcce10edc_MD5.jpeg](/attachments/e0c24f28a3cd4dd040a3917bcce10edc_MD5.jpeg)
+[Open: Pasted image 20250515111214.png](/images/e0c24f28a3cd4dd040a3917bcce10edc_MD5.jpeg)
+![e0c24f28a3cd4dd040a3917bcce10edc_MD5.jpeg](/images/e0c24f28a3cd4dd040a3917bcce10edc_MD5.jpeg)
 
 ## 标题
 
