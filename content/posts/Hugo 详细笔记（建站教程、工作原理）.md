@@ -2,13 +2,9 @@
 title: Hugo 详细笔记（建站教程、工作原理）
 source: https://yuanyi-au.github.io/posts/hugo/
 share: true
-author:
-  - "[My Blog]({{< relref "My%20Blog.md" >}})"
 published: 2021-11-03
 created: 2025-05-14
 description: 基本概念 什么是 Hugo Hugo 是一个用 Go 编写的快速静态网站生成器，具有极快的构建速度（每个页面小于1毫秒），拥有大量现成主题，在开发过程中通过 liveload 即时渲染更改，可以托管在任何平台，是一个理想的建站工具。静态网站生成器 网站生成器的目的是将内容转换为 HTML 文件，大多数网站生成器是动态的，这意味着每次用户请求页面时 HTTP 服务器都会运行生成器以创建新的 HTML 文件。动态站点生成器会将 HTML 文件缓存下来，以提高页面的加载速度。而 Hugo 更进一步，将 HTML 文件直接在计算机上渲染。在将文件复制到托管 HTTP 服务器的计算机之前可以在本地查看这些文件。因为 HTML 文件不是动态生成的，所以 Hugo 是一个静态网站生成器。快速建站 快速开始 在 Windows 上安装 最简单的方法是直接下载 最新版本的 hugo 安装请安装 extended 版本，可以对 scss 文件进行编译，否则在之后使用模板时会出现问题注意：要把 hugo 的路径添加到环境变量 Path 中！我自己在下载安装扩展版本的时候有点问题，最后重新用 Chocolatey 安装成功，非常方便。其它系统的安装过程可以看 官网文档。新建网站 hugo version 检查安装是否成功hugo new site [sitename] 创建一个新的网站hugo server 开启 Hugo 服务器，可以在本地预览调试网站结构目录 .├── archetypes ├── config.
-tags:
-  - clippings
 ---
 ## 基本概念
 
