@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Git常用命令及使用 | Liugngg blog</title>
+<meta name="keywords" content="markdown, typora">
+<meta name="description" content="Open: Pasted image 20250528100505.png
+
+1.常用
+git remote add origin git@github.com:yeszao/dofiler.git         # 配置远程git版本库
+git pull origin master                                          # 下载代码及快速合并 
+git push origin master                                          # 上传代码及快速合并
+git fetch origin                                                # 从远程库获取代码
+​
+git branch                                                      # 显示所有分支
+git checkout master                                             # 切换到master分支
+git checkout -b dev                                             # 创建并切换到dev分支
+git commit -m &quot;first version&quot;                                   # 提交
+​
+git status                                                      # 查看状态
+git log                                                         # 查看提交历史
+​
+git config --global core.editor vim                             # 设置默认编辑器为vim（git默认用nano）
+git config core.ignorecase false                                # 设置大小写敏感
+git config --global user.name &quot;YOUR NAME&quot;                       # 设置用户名
+git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;  # 设置邮箱
+
+2.别名 alias
+git config --global alias.br=&quot;branch&quot;                 
+git config --global alias.co=&quot;checkout&quot;               
+git config --global alias.cb=&quot;checkout -b&quot;            
+git config --global alias.cm=&quot;commit -m&quot;              
+git config --global alias.st=&quot;status&quot;                 
+git config --global alias.pullm=&quot;pull origin master&quot;  
+git config --global alias.pushm=&quot;push origin master&quot;  
+git config --global alias.log=&quot;git log --oneline --graph --decorate --color=always&quot; 
+git config --global alias.logg=&quot;git log --graph --all --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)&#39; --abbrev-commit --date=relative&quot; 
+
+3.创建版本库
+git clone &lt;url&gt;                 
+git init                        
+
+4.修改和提交
+git status                      
+git diff                        
+git add .                       
+git add &lt;file&gt;                  
+git mv &lt;old&gt; &lt;new&gt;              
+git rm &lt;file&gt;                   
+git rm --cached &lt;file&gt;          
+git commit -m “commit message”  
+git commit --amend              
+
+5.查看历史
+git log                         
+git log -p &lt;file&gt;               
+git blame &lt;file&gt;                
+
+6.撤销
+git reset --hard HEAD           
+git reset --hard &lt;version&gt;      
+git checkout HEAD &lt;file&gt;        
+git checkout -- &lt;file&gt;          
+git revert &lt;commit&gt;             
+
+7.分支与标签
+git branch                      
+git checkout &lt;branch/tag&gt;       
+git branch &lt;new-branch&gt;         
+git branch -d &lt;branch&gt;          
+git tag                         
+git tag &lt;tagname&gt;               
+git tag -a &quot;v1.0&quot; -m &quot;一些说明&quot;  
+git tag -d &lt;tagname&gt;            
+​
+git checkout dev                
+git cherry-pick 62ecb3
+
+8.合并与衍合
+git merge &lt;branch&gt;              
+git merge --abort               
+git merge dev -Xtheirs          
+git rebase &lt;branch&gt;             
+
+9.远程操作
+git remote -v                   
+git remote show &lt;remote&gt;        
+git remote add &lt;remote&gt; &lt;url&gt;   
+git remote remove &lt;remote&gt;      
+git fetch &lt;remote&gt;              
+git pull &lt;remote&gt; &lt;branch&gt;      
+git push &lt;remote&gt; &lt;branch&gt;      
+git push &lt;remote&gt; :&lt;branch/tag-name&gt; 
+git push --tags                 
+
+10.打包
+git archive --format=zip --output ../file.zip master    
+git archive --format=zip --output ../v1.2.zip v1.2      
+git archive --format=zip v1.2 &gt; ../v1.2.zip  
+
+11.全局和局部配置
+全局配置保存在：$Home/.gitconfig
+本地仓库配置保存在：.git/config
+
+12.远程与本地合并
+git init                              # 初始化本地代码仓
+git add .                             # 添加本地代码
+git commit -m &quot;add local source&quot;      # 提交本地代码
+git pull origin master                # 下载远程代码
+git merge master                      # 合并master分支
+git push -u origin master             # 上传代码
+
+1.常用">
+<meta name="author" content="liug">
+<link rel="canonical" href="http://localhost:1313/posts/1005/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/1005/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Liugngg blog (Alt + H)">Liugngg blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Git常用命令及使用
+    </h1>
+    <div class="post-meta"><span title='2025-05-28 00:00:00 +0000 UTC'>May 28, 2025</span>&nbsp;·&nbsp;liug
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="1常用"><a href="/images/49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg">Open: Pasted image 20250528100505.png</a>
+<img alt="49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg" loading="lazy" src="/images/49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg">
+<strong>1.常用</strong></h2>
+<pre><code>git remote add origin git@github.com:yeszao/dofiler.git         # 配置远程git版本库
+git pull origin master                                          # 下载代码及快速合并 
+git push origin master                                          # 上传代码及快速合并
+git fetch origin                                                # 从远程库获取代码
+​
+git branch                                                      # 显示所有分支
+git checkout master                                             # 切换到master分支
+git checkout -b dev                                             # 创建并切换到dev分支
+git commit -m &quot;first version&quot;                                   # 提交
+​
+git status                                                      # 查看状态
+git log                                                         # 查看提交历史
+​
+git config --global core.editor vim                             # 设置默认编辑器为vim（git默认用nano）
+git config core.ignorecase false                                # 设置大小写敏感
+git config --global user.name &quot;YOUR NAME&quot;                       # 设置用户名
+git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;  # 设置邮箱
+</code></pre>
+<h2 id="2别名-alias"><strong>2.别名 alias</strong><a hidden class="anchor" aria-hidden="true" href="#2别名-alias">#</a></h2>
+<pre><code>git config --global alias.br=&quot;branch&quot;                 
+git config --global alias.co=&quot;checkout&quot;               
+git config --global alias.cb=&quot;checkout -b&quot;            
+git config --global alias.cm=&quot;commit -m&quot;              
+git config --global alias.st=&quot;status&quot;                 
+git config --global alias.pullm=&quot;pull origin master&quot;  
+git config --global alias.pushm=&quot;push origin master&quot;  
+git config --global alias.log=&quot;git log --oneline --graph --decorate --color=always&quot; 
+git config --global alias.logg=&quot;git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative&quot; 
+</code></pre>
+<h2 id="3创建版本库"><strong>3.创建版本库</strong><a hidden class="anchor" aria-hidden="true" href="#3创建版本库">#</a></h2>
+<pre><code>git clone &lt;url&gt;                 
+git init                        
+</code></pre>
+<h2 id="4修改和提交"><strong>4.修改和提交</strong><a hidden class="anchor" aria-hidden="true" href="#4修改和提交">#</a></h2>
+<pre><code>git status                      
+git diff                        
+git add .                       
+git add &lt;file&gt;                  
+git mv &lt;old&gt; &lt;new&gt;              
+git rm &lt;file&gt;                   
+git rm --cached &lt;file&gt;          
+git commit -m “commit message”  
+git commit --amend              
+</code></pre>
+<h2 id="5查看历史"><strong>5.查看历史</strong><a hidden class="anchor" aria-hidden="true" href="#5查看历史">#</a></h2>
+<pre><code>git log                         
+git log -p &lt;file&gt;               
+git blame &lt;file&gt;                
+</code></pre>
+<h2 id="6撤销"><strong>6.撤销</strong><a hidden class="anchor" aria-hidden="true" href="#6撤销">#</a></h2>
+<pre><code>git reset --hard HEAD           
+git reset --hard &lt;version&gt;      
+git checkout HEAD &lt;file&gt;        
+git checkout -- &lt;file&gt;          
+git revert &lt;commit&gt;             
+</code></pre>
+<h2 id="7分支与标签"><strong>7.分支与标签</strong><a hidden class="anchor" aria-hidden="true" href="#7分支与标签">#</a></h2>
+<pre><code>git branch                      
+git checkout &lt;branch/tag&gt;       
+git branch &lt;new-branch&gt;         
+git branch -d &lt;branch&gt;          
+git tag                         
+git tag &lt;tagname&gt;               
+git tag -a &quot;v1.0&quot; -m &quot;一些说明&quot;  
+git tag -d &lt;tagname&gt;            
+​
+git checkout dev                
+git cherry-pick 62ecb3
+</code></pre>
+<h2 id="8合并与衍合"><strong>8.合并与衍合</strong><a hidden class="anchor" aria-hidden="true" href="#8合并与衍合">#</a></h2>
+<pre><code>git merge &lt;branch&gt;              
+git merge --abort               
+git merge dev -Xtheirs          
+git rebase &lt;branch&gt;             
+</code></pre>
+<h2 id="9远程操作"><strong>9.远程操作</strong><a hidden class="anchor" aria-hidden="true" href="#9远程操作">#</a></h2>
+<pre><code>git remote -v                   
+git remote show &lt;remote&gt;        
+git remote add &lt;remote&gt; &lt;url&gt;   
+git remote remove &lt;remote&gt;      
+git fetch &lt;remote&gt;              
+git pull &lt;remote&gt; &lt;branch&gt;      
+git push &lt;remote&gt; &lt;branch&gt;      
+git push &lt;remote&gt; :&lt;branch/tag-name&gt; 
+git push --tags                 
+</code></pre>
+<h2 id="10打包"><strong>10.打包</strong><a hidden class="anchor" aria-hidden="true" href="#10打包">#</a></h2>
+<pre><code>git archive --format=zip --output ../file.zip master    
+git archive --format=zip --output ../v1.2.zip v1.2      
+git archive --format=zip v1.2 &gt; ../v1.2.zip  
+</code></pre>
+<h2 id="11全局和局部配置"><strong>11.全局和局部配置</strong><a hidden class="anchor" aria-hidden="true" href="#11全局和局部配置">#</a></h2>
+<pre><code>全局配置保存在：$Home/.gitconfig
+本地仓库配置保存在：.git/config
+</code></pre>
+<h2 id="12远程与本地合并"><strong>12.远程与本地合并</strong><a hidden class="anchor" aria-hidden="true" href="#12远程与本地合并">#</a></h2>
+<pre><code>git init                              # 初始化本地代码仓
+git add .                             # 添加本地代码
+git commit -m &quot;add local source&quot;      # 提交本地代码
+git pull origin master                # 下载远程代码
+git merge master                      # 合并master分支
+git push -u origin master             # 上传代码
+</code></pre>
+<p>1.常用</p>
+<p><strong>安装包，默认会安装最新的版本</strong></p>
+<pre><code>npm install gulp
+</code></pre>
+<p><strong>安装指定版本</strong></p>
+<pre><code>npm install gulp@3.9.1
+</code></pre>
+<p><strong>-S, &ndash;save 安装包信息将加入到dependencies（生产阶段的依赖）</strong></p>
+<pre><code>npm install gulp 
+</code></pre>
+<p><strong>-D, &ndash;save-dev 安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它</strong></p>
+<pre><code>npm install gulp 
+</code></pre>
+<h2 id="npm-uninstall-卸载模块">npm uninstall 卸载模块<a hidden class="anchor" aria-hidden="true" href="#npm-uninstall-卸载模块">#</a></h2>
+<p>基础语法</p>
+<pre><code>npm uninstall [&lt;@scope&gt;/]&lt;pkg&gt;[@&lt;version&gt;]... [-S|--save|-D|--save-dev|-O|--save-optional]
+​
+aliases: remove, rm, r, un, unlink
+</code></pre>
+<h2 id="npm-update-更新模块">npm update 更新模块<a hidden class="anchor" aria-hidden="true" href="#npm-update-更新模块">#</a></h2>
+<pre><code>npm update [-g] [&lt;pkg&gt;...]
+</code></pre>
+<h2 id="npm-ls-查看安装的模块">npm ls 查看安装的模块<a hidden class="anchor" aria-hidden="true" href="#npm-ls-查看安装的模块">#</a></h2>
+<pre><code>npm ls [[&lt;@scope&gt;/]&lt;pkg&gt; ...]
+​
+aliases: list, la, ll
+</code></pre>
+<p>查看全局安装的模块及依赖</p>
+<pre><code>npm ls -g 
+</code></pre>
+<h2 id="npm-init-在项目中引导创建一个packagejson文件">npm init 在项目中引导创建一个package.json文件<a hidden class="anchor" aria-hidden="true" href="#npm-init-在项目中引导创建一个packagejson文件">#</a></h2>
+<pre><code>npm init [-f|--force|-y|--yes]
+</code></pre>
+<h2 id="npm-help-查看某条命令的详细帮助">npm help 查看某条命令的详细帮助<a hidden class="anchor" aria-hidden="true" href="#npm-help-查看某条命令的详细帮助">#</a></h2>
+<pre><code>npm help &lt;term&gt; [&lt;terms..&gt;]
+</code></pre>
+<h2 id="npm-root-查看包的安装路径"><strong>npm root</strong> 查看包的安装路径<a hidden class="anchor" aria-hidden="true" href="#npm-root-查看包的安装路径">#</a></h2>
+<pre><code>npm root [-g]
+</code></pre>
+<h2 id="npm-start-启动模块">npm start 启动模块<a hidden class="anchor" aria-hidden="true" href="#npm-start-启动模块">#</a></h2>
+<p>基础语法</p>
+<pre><code>npm start [
+</code></pre>
+<h2 id="npm-stop-停止模块">npm stop 停止模块<a hidden class="anchor" aria-hidden="true" href="#npm-stop-停止模块">#</a></h2>
+<pre><code>npm stop [-- &lt;args&gt;]
+</code></pre>
+<p><strong>Yarn 常用命令</strong></p>
+<pre><code>npm install === yarn —— install安装是默认行为
+ 
+npm install taco --save === yarn add taco —— taco包立即被保存到 package.json 中。
+ 
+npm uninstall taco --save === yarn remove taco
+ 
+npm install taco --save-dev === yarn add taco --dev
+ 
+npm update --save === yarn upgrade
+ 
+npm install taco@latest --save === yarn add taco
+ 
+npm install taco --global === yarn global add taco —— 一如既往，请谨慎使用 global 标记。
+</code></pre>
+<p><strong>Yarn 独有的命令</strong></p>
+<pre><code>yarn licenses ls —— 允许你检查依赖的许可信息
+yarn licenses generate —— 自动创建依赖免责声明 license
+yarn why taco —— 检查为什么会安装 taco，详细列出依赖它的其他包
+yarn why vuepress —— 检查为什么会安装 vuepress，详细列出依赖它的其他包
+</code></pre>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E6%A0%87%E7%AD%BE1/">标签1</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%A0%87%E7%AD%BE2/">标签2</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Liugngg blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
