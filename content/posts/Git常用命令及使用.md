@@ -19,8 +19,8 @@ keywords:
   - typora
 ---
 
-[Open: Pasted image 20250528100505.png](attachments/49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg)
-![49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg](attachments/49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg)
+[Open: Pasted image 20250528100505.png](/images/49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg)
+![49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg](/images/49b6597466e1a181da329b9aa73ceaa2_MD5.jpeg)
 **1.常用**
 --------
 
