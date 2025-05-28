@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Liugngg blog</description>
     <generator>Hugo -- 0.146.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>爬虫</title>
+      <link>http://localhost:1313/tags/%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E7%88%AC%E8%99%AB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>笔记</title>
+      <link>http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Markdown</title>
       <link>http://localhost:1313/tags/markdown/</link>

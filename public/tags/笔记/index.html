@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Tags | Liugngg blog</title>
+<title>笔记 | Liugngg blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/">
+<link rel="canonical" href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/">
 <noscript>
     <style>
         #theme-toggle,
@@ -102,25 +102,30 @@
         </ul>
     </nav>
 </header>
-<main class="main">
+<main class="main"> 
 <header class="page-header">
-    <h1>Tags</h1>
+  <h1>
+    笔记
+  </h1>
 </header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="http://localhost:1313/tags/markdown/">markdown <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/typora/">typora <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/%E7%88%AC%E8%99%AB/">爬虫 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/">笔记 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">爬虫提取笔记--刘刚
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、爬虫基础 1. 爬虫概述 2. Http协议复习 二、request 模块 三、数据提取 1. 响应内容的分类 结构化的响应内容 json 数据（高频出现） jsonmok re模块 jsonpath模块 xml 数据（低频出现） re 模块 lxml 模块 非结构化响应内容 html re 模块 lxml 模块 2. xml 和 html的区别 html 超文本语言标记 为了更好地==显示==数据，侧重点是为了显示 xml 可扩展标记语言 为了==传输==和==存储==数据，侧重点在于数据内容本身 3. 常用数据解析方法 Open: 爬虫常用数据解析方法.png 1. jsonpath 模块的使用 场景 ​	多层嵌套的复杂字典直接提取数据
+安装
+pip install jsonpath
+使用方法
+from jsonpath import jsonpath # ‘a’为需要解析的字典 # jsonpath的结果为列表，获取数据需要索引 ret = jsonpath(a,&#39;jsonpath语法规则字符串&#39;) jsonpath语法规则
+$ 根节点 (最外层大括号) . 子节点 .. 子孙节点，内部任意位置 基础代码示例
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-27 00:00:00 +0000 UTC'>May 27, 2025</span>&nbsp;·&nbsp;liug</footer>
+  <a class="entry-link" aria-label="post link to 爬虫提取笔记--刘刚" href="http://localhost:1313/posts/1639/"></a>
+</article>
     </main>
     
 <footer class="footer">
