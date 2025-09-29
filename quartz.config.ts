@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "liugngg's blog",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,8 +16,8 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    baseUrl: "blog.liugngg.top",
+    ignorePatterns: ["private", "templates", ".obsidian", "工作相关"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
