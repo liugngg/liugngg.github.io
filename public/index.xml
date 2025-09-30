@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>liugngg&#039;s blog</title>
+      <link>https://blog.liugngg.top</link>
+      <description>Last 10 notes on liugngg&#039;s blog</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>🌱 liugngg 的数字花园 🌱</title>
+    <link>https://blog.liugngg.top/</link>
+    <guid>https://blog.liugngg.top/</guid>
+    <description><![CDATA[ 欢迎来到 liugngg 的知识库！ 📚 最近更新 ARM架构的黑群晖都需要加焊SPI芯片，而x86架构的黑群晖引导时，为什么不需要硬件SPI就可以启动？ 最新开源TSforg激活，一行代码激活windows及office所有版本 利用ffmpeg提取视频音频保存为.mka 🏷️ 按标签浏览 学习笔记 生活 互联网技术 🔍 搜索 使用右上角的搜索功能查找内容. ]]></description>
+    <pubDate>Sun, 28 Sep 2025 16:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
