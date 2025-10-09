@@ -40,10 +40,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Fix quartz permissions
-        run: chmod +x node_modules/.bin/quartz
       - name: Build Quartz
-        run: npx quartz build --serve
+        run: npx quartz build
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
