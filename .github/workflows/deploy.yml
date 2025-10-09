@@ -46,11 +46,16 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Check built files
+        run: |
+            ls -la public/
+            echo "Checking index.html exists:"
+            test -f public/index.html && echo "✓ index.html exists" || echo "✗ index.html missing"
   deploy:
     needs: build
     environment:
       name: github-pages
-      url: 'blog.liugngg.top'
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
